@@ -16,6 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from ghost_app.urls import urlpatterns as ghost_app_urls
+
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
+urlpatterns += ghost_app_urls
